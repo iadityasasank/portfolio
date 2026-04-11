@@ -5,14 +5,14 @@ import { BsInfoCircleFill } from "react-icons/bs";
 import { Animate } from "react-simple-animate";
 
 const personalInformation = [
-    { label: "Full Name", value: "Sandeep Cheemakurthi" },
-    { label: "Mobile number", value: "8121088990" },
-    { label: "Location", value: "Hyderabad, Telanagan, India" },
-    { label: "E-Mail", value: "chsandeep2000@gmail.com" },
-    { label: "LinkedIn", value: "https://linkedin.com/in/sandeep-cheemakurthi" },
+    { label: "Full Name", value: "Aditya Sasank Cheemakurthi" },
+    { label: "Mobile number", value: "7659024703" },
+    { label: "Location", value: "Bangalore, Karnataka, India" },
+    { label: "E-Mail", value: "adithyashashank97@gmail.com" },
+    { label: "LinkedIn", value: "https://linkedin.com/in/aditya-sasank" },
 ]
 
-const jobSummary = 'A seasoned Angular developer with three years of hands-on experience, I have a proven track record in crafting responsive web applications. My versatility extends to backend development, which enhances my ability to deliver comprehensive solutions. I am now eager to embrace new challenges and leverage my skills on innovative projects, contributing to meaningful advancements in technology.'
+const jobSummary = 'A Cyber Defense Analyst with a passion for security operations and threat awareness. I have a proven track record in identifying and mitigating security risks, and have a strong understanding of the latest security technologies and trends.'
 
 const About = () => {
     return (
@@ -34,7 +34,7 @@ const About = () => {
                             transform: 'translatex(0px)'
                         }}
                     >
-                        <h3 className="personalInfoHeader">Front End Developer</h3>
+                        <h3 className="personalInfoHeader">Cyber Defense Analyst</h3>
                         <p>{jobSummary}</p>
                     </Animate>
                     <Animate

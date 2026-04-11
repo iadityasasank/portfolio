@@ -15,9 +15,9 @@ const Home = () => {
         <section id="home" className="home">
             <div className="home__text-wrapper">
                 <h1>
-                    Hello, I'm Sandeep
+                    Hello, I'm Aditya Sasank Ch
                 </h1><br></br>
-                <h3>Front-End Developer | Angular Expert | User Experience Enthusiast</h3>
+                <h3>Cyber Defense Analyst | Security Operations | Threat Awareness</h3>
             </div>
             <Animate
                 play
@@ -35,7 +35,7 @@ const Home = () => {
                         <h2>Can reach out me at</h2>
                     </div>
                     <div className="home__contact-me__whatsapp">
-                        <a href="https://wa.me/8121088990?text=Hello%20there!" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/917659024703?text=Hello%20there!" target="_blank" rel="noopener noreferrer">
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                                 alt="WhatsApp"

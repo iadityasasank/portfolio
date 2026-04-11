@@ -6,23 +6,21 @@ import { BsInfoCircleFill } from "react-icons/bs";
 const portfolioData = [
     {
         id: 2,
-        name: "Ecommerce",
-        image:"Ecommerce",
-        link: ''
+        name: "SOC Toolkit",
+        image: "SOC Toolkit",
+        link: "",
+        description:
+            "Tools and scripts for SOC analysts and engineers: log parsing and analysis, threat intelligence integrations, incident response automation, network traffic analysis, basic malware utilities, automated reporting, and shared helpers. Layout: log_analysis/, threat_intel/, incident_response/, network_monitoring/, malware_analysis/, reporting/, utils/.",
     },
     {
         id: 2,
-        name: "Food Delivery App",
-        image:"Food Delivery App",
-        link: ''
+        name: "Ecommerce Website",
+        image: "Ecommerce Website",
+        link: "",
+        description:
+            "E-commerce website built using Cursor and Claude Code.",
     },
-    {
-        id: 3,
-        name: "Figma Designs",
-        image: "Figma Designs",
-        link: ''
-    }
-]
+];
 
 const filterData = [
     {
@@ -52,18 +50,9 @@ const Otherprojects=()=>{
         setHoveredValue(index);
     }
 
-    console.log('========================');
-    console.log(hoveredValue)
-    console.log('========================');
-
-    console.log('========================');
-    console.log(filteredvalue)
-    console.log('========================');
-
-    const filteredItems = filteredvalue === 1 ? portfolioData: 
+    const filteredItems = filteredvalue === 1 ? portfolioData:
     portfolioData.filter(item=>item.id === filteredvalue);
 
-    console.log('filteredItems',filteredItems)
     return (
         <section id="otherprojects" className="otherprojects">
             <PageHeader
@@ -83,13 +72,12 @@ const Otherprojects=()=>{
                 <div className="otherprojects__content__cards">
                     {
                         filteredItems.map((item,index)=>(
-                            <div className="otherprojects__content__cards__item" 
+                            <div className="otherprojects__content__cards__item"
                                  key={`cardItem${item.name.trim()}`}
                                  onMouseEnter={()=>handleHover(index)}
                                  onMouseLeave={()=>handleHover(null)}>
                                 <div className="otherprojects__content__cards__item__img-wrapper">
                                     <a>
-                                        {/* <img src="{item.image}"/> */}
                                         <h3>{item.image}</h3>
                                     </a>
                                 </div>
@@ -97,7 +85,20 @@ const Otherprojects=()=>{
                                     {
                                         index === hoveredValue && (
                                             <div>
-                                                <button>Visit</button>
+                                                {item.description && (
+                                                    <p style={{
+                                                        fontSize: '11px',
+                                                        lineHeight: 1.35,
+                                                        color: '#181818',
+                                                        margin: '0 8px 10px',
+                                                        maxHeight: '120px',
+                                                        overflow: 'auto',
+                                                        textAlign: 'left',
+                                                    }}>
+                                                        {item.description}
+                                                    </p>
+                                                )}
+                                                <button type="button">Visit</button>
                                             </div>
                                         )
                                     }
