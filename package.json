@@ -48,5 +48,10 @@
   },
   "devDependencies": {
     "gh-pages": "^6.2.0"
+  },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "react-intersection-observer": "$react-intersection-observer"
   }
 }

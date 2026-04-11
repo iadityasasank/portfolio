@@ -31,7 +31,7 @@ export const data = {
             description: "MPC",
         },
         {
-            title: "SSC"
+            title: "SSC",
             subTitle: "Sri Krishnaveni Talent School · Board of Secondary Education, Andhra Pradesh · 2012",
         },
         {

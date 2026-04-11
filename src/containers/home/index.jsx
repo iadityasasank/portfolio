@@ -43,7 +43,7 @@ const Home = () => {
                         </a>
                     </div>
                     <div className="home__contact-me__gmail">
-                        <a href="mailto:chsandeep2000@gmail.com?subject=Hello%20there!&body=I%20wanted%20to%20get%20in%20touch%20with%20you." target="_blank" rel="noopener noreferrer">
+                        <a href="mailto:adithyashashank97@gmail.com?subject=Hello%20there!&body=I%20wanted%20to%20get%20in%20touch%20with%20you." target="_blank" rel="noopener noreferrer">
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
                                 alt="Gmail"
