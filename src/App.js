@@ -35,18 +35,15 @@ function App() {
   };
 
   const location = useLocation();
-  console.log('location',location);
-  
-  const renderParticleJsInHomePage = location?.pathname === "/portfolio/home" || location?.pathname === "/";
+  const isHome = location.pathname === "/portfolio/home" || location.pathname === "/";
+  const renderParticleJsInHomePage = isHome;
 
   return (
-    <div className="App">
-      {/* Particles js background in homepage*/}
-      {renderParticleJsInHomePage && 
+    <div className={`App${isHome ? " App--home" : ""}`}>
+      {renderParticleJsInHomePage && (
         <Particles id="particles" particlesLoaded={particlesLoadedFunction} options={particles} />
-      }
-      {/* navbar */}
-      <NavBar/>
+      )}
+      {!isHome && <NavBar />}
       {/* main page content */}
       <div className='App__main-page-content'>
         <Routes>

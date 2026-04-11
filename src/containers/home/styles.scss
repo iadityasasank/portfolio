@@ -1,19 +1,36 @@
 .home{
     position: relative;
     height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 2.4rem 1.6rem 3rem;
+    box-sizing: border-box;
+    gap: 1.2rem;
+
+    &__shield{
+        color: var(--yellow-theme-main-color);
+        filter: drop-shadow(0 0 12px rgba(255, 221, 64, 0.25));
+
+        svg{
+            width: clamp(5.6rem, 14vw, 9rem);
+            height: clamp(5.6rem, 14vw, 9rem);
+            display: block;
+        }
+    }
     
     &__text-wrapper{
         text-align: center;
+        max-width: 96rem;
+        width: 100%;
         h1{
             color: var(--yellow-theme-main-color);
-            margin: 0px;
-            font-weight: 300;
-            font-size: 8rem;
-            line-height: 10rem;
+            margin: 0;
+            font-weight: 400;
+            font-size: clamp(2.8rem, 3.8vw + 1.2rem, 5.2rem);
+            line-height: 1.2;
             position: relative;
             overflow: hidden;
             white-space: nowrap;
@@ -21,7 +38,15 @@
         }
 
         h3{
+            margin: 1rem 0 0;
+            padding: 0.5rem 1.2rem;
+            font-size: clamp(1.35rem, 1.1vw + 1rem, 2.2rem);
+            line-height: 1.35;
+            font-weight: 600;
+            color: #181818;
             background-color: var(--yellow-theme-main-color);
+            display: inline-block;
+            max-width: 100%;
             overflow: hidden;
             white-space: nowrap;
             animation: typingAnimation 2.5s steps(30,end);
@@ -64,6 +89,42 @@
             align-self: center;
         }
     }
+
+    &__nav{
+        margin-top: 1.6rem;
+        width: 100%;
+        max-width: 64rem;
+    }
+
+    &__nav-list{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem 1.6rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__nav-link{
+        text-decoration: none;
+        color: var(--yellow-theme-main-color);
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 0.6rem 1.2rem;
+        border: 1px solid var(--yellow-theme-main-color);
+        border-radius: 4px;
+        transition: background-color 0.25s ease, color 0.25s ease;
+
+        &:hover,
+        &:focus-visible{
+            background-color: var(--yellow-theme-main-color);
+            color: #181818;
+            outline: none;
+        }
+    }
 }
 
 @keyframes typingAnimation {
@@ -77,22 +138,9 @@
 }
 
 @media only screen and (max-width: 550px) {
-    .home__text-wrapper h1{
-        font-size: 3rem;
-        line-height: 5rem;
-    }
-}
-
-@media only screen and (min-width: 551px) and (max-width: 768px) {
-    .home__text-wrapper h1{
-        font-size: 4rem;
-        line-height: 6rem;
-    }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 990px) {
-    .home__text-wrapper h1{
-        font-size: 6rem;
-        line-height: 8rem;
+    .home__text-wrapper h3{
+        white-space: normal;
+        animation: none;
+        width: auto;
     }
 }

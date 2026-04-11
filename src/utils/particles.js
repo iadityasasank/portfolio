@@ -1,10 +1,12 @@
-export default {
+const cyberColors = ["#ffdd40", "#2dd4bf", "#38bdf8", "#a3e635"];
+
+const particlesOptions = {
     background: {
         color: {
             value: "#1d1d1d",
         },
     },
-    fpsLimit: 120,
+    fpsLimit: 60,
     interactivity: {
         events: {
             onClick: {
@@ -19,51 +21,80 @@ export default {
         },
         modes: {
             push: {
-                quantity: 4,
+                quantity: 3,
             },
             repulse: {
-                distance: 200,
-                duration: 0.4,
+                distance: 120,
+                duration: 0.35,
             },
         },
     },
     particles: {
         color: {
-            value: "#ffffff",
+            value: cyberColors,
         },
         links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
+            enable: false,
         },
         move: {
             direction: "none",
             enable: true,
             outModes: {
-                default: "bounce",
+                default: "out",
             },
-            random: false,
-            speed: 6,
+            random: true,
+            speed: 0.85,
             straight: false,
         },
         number: {
             density: {
                 enable: true,
-                area: 800,
+                area: 900,
             },
-            value: 80,
+            value: 55,
         },
         opacity: {
-            value: 0.5,
+            value: { min: 0.15, max: 0.55 },
+            animation: {
+                enable: true,
+                speed: 0.6,
+                sync: false,
+                mode: "random",
+            },
+        },
+        rotate: {
+            value: { min: 0, max: 360 },
+            direction: "random",
+            animation: {
+                enable: true,
+                speed: 8,
+            },
         },
         shape: {
-            type: "circle",
+            type: ["polygon", "character"],
+            options: {
+                polygon: {
+                    sides: 6,
+                },
+                character: {
+                    value: ["0", "1"],
+                    font: "Consolas, 'Courier New', monospace",
+                    style: "",
+                    weight: "600",
+                },
+            },
         },
         size: {
-            value: { min: 1, max: 5 },
+            value: { min: 2, max: 5 },
+            animation: {
+                enable: true,
+                speed: 12,
+                minimumValue: 1,
+                sync: false,
+            },
         },
     },
     detectRetina: true,
-}
+};
+
+export default particlesOptions;
